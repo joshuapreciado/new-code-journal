@@ -14,12 +14,50 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
+    <div class="heading">
+      <h3 class="heading-text">Code Journal</h3>
+    </div>
   </header>
   <main>
   </main>
+  <div data-view="entry-form">
+    <form>
+      <div class="container">
+        <div class="column-full">
+          <div class="new-entry">
+            <p><b>New Entry</b></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="column-half">
+            <img src="images/placeholder-image-square.jpg" alt="placeholder">
+          </div>
+          <div class="column-half">
+            <p><b>Title</b></p>
+            <input
+            required
+            size="35"
+            class="title-text"
+            type="text">
+            <p><b>Photo URL</b></p>
+            <input
+            required
+            size="35"
+            class="photo-text"
+            type="text">
+          </div>
+          <div class="column-full">
+            <p><b>Notes</b></p>
+            <textarea required cols="80" class="textarea-1"></textarea>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
