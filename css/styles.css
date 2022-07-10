@@ -1,19 +1,18 @@
 
-.heading {
+.containertwo {
   background-color: #562B81;
   height: 50px;
   padding: 1px;
   display: flex;
-  margin: auto;
-
 }
 .heading-text {
+  margin: auto;
+  flex-basis: 43%;
   color: white;
   font-size: 20px;
   font-family: Proza Libre;
-  margin-left: 34rem;
   font-weight: 100;
-  flex-basis: calc(100%);
+  background-color: #562B81;
 }
 
 p {
@@ -33,10 +32,16 @@ img:nth-child(1) {
 
 .title-text {
   height: 2rem;
-    border-radius: .2rem;
-    border: solid 1px rgb(174, 173, 173);
-    margin-right: 2rem;
+  border-radius: .2rem;
+  border: solid 1px rgb(174, 173, 173);
+  margin-right: 2rem;
 }
+.title-text:focus, .photo-text:focus,
+.textarea-1:focus {
+  outline: none;
+  border: 2px solid #562B81;
+}
+
 
 .photo-text {
   height: 2rem;
@@ -69,6 +74,25 @@ img:nth-child(1) {
   padding-top: 5px;
 }
 
+  .save-button {
+    width: 52px;
+    height: 30px;
+    padding: 5px;
+    margin-top: 1rem;
+    margin-left: 35.3rem;
+    color: white;
+    background-color: #562B81;
+    border: solid 1px;
+    border-radius: .3rem;
+  }
+
+
+
+
+
+
+
+
 @media screen and (max-width: 650px) {
   .heading {
     width: 100%;
@@ -84,6 +108,10 @@ img:nth-child(1) {
     width: 20.5rem;
   }
 
+  .heading-text {
+    flex-basis: auto;
+  }
+
 
   input {
     width: 20.5rem;
@@ -91,5 +119,9 @@ img:nth-child(1) {
   img:nth-child(1) {
     height: 329px;
     width: 329px;
+  }
+
+  .save-button {
+    margin-left: 17.4rem;
   }
 }
