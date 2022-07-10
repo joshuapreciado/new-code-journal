@@ -30,7 +30,7 @@ img:nth-child(1) {
   width: 300px;
 }
 
-.title-text {
+.titletext {
   height: 2rem;
   border-radius: .2rem;
   border: solid 1px rgb(174, 173, 173);
@@ -43,14 +43,14 @@ img:nth-child(1) {
 }
 
 
-.photo-text {
+.phototext {
   height: 2rem;
   border-radius: .2rem;
   border: solid 1px rgb(174, 173, 173);
   margin-right: 2rem;
 }
 
-.notes-text {
+.notestext {
   height: 5rem;
   border-radius: .2rem;
   border: solid 1px rgb(174, 173, 173);
@@ -63,7 +63,7 @@ img:nth-child(1) {
   flex-basis: calc(20% / 3);
 }
 
-.textarea-1 {
+.textarea1 {
   resize: none;
   height: 9rem;
   border-radius: .2rem;
@@ -104,7 +104,7 @@ img:nth-child(1) {
     font-size: 30px;
   }
 
-  .textarea-1 {
+  .textarea1 {
     width: 20.5rem;
   }
 
