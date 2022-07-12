@@ -7,7 +7,7 @@ var formelement = document.querySelector('form');
 photoholder.addEventListener('input', inputhandler);
 
 function inputhandler(event) {
-  if (falseyimage < event.target.value) {
+  if (falseyimage(event.target.value)) {
     fakeimage.src = event.target.value;
   } else {
     fakeimage.src = 'images/placeholder-image-square.jpg';
