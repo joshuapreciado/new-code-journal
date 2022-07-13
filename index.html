@@ -20,11 +20,12 @@
   <header>
     <div class="containertwo">
       <h3 class="heading-text">Code Journal</h3>
+      <a href="#entries-form" class="entrieslink">Entries</a>
     </div>
   </header>
   <main>
   </main>
-  <div data-view="entry-form" id="entry-form" class="entryformclass">
+  <div data-view="entry-form" id="entry-form" class="entryformclass hidden">
     <form>
       <div class="container">
         <div class="column-full">
@@ -62,6 +63,15 @@
         </div>
       </div>
     </form>
+  </div>
+  <div data-view="entries" id="entries-form" class="entriesformclass">
+    <div class="container">
+      <div class="row justifyconspaceb">
+        <h1>Entries</h1>
+        <a id="newentry" href="#entry-form">NEW</a>
+      </div>
+      <ul id="unordered-list" class="unorderedentries"></ul>
+    </div>
   </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
