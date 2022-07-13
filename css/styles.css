@@ -1,0 +1,151 @@
+.containertwo {
+  background-color: #562B81;
+  height: 50px;
+  padding: 1px;
+  display: flex;
+}
+
+.heading-text {
+  margin: auto;
+  flex-basis: 43%;
+  color: white;
+  font-size: 20px;
+  font-family: Proza Libre;
+  font-weight: 100;
+  background-color: #562B81;
+}
+
+
+h2 {
+  font-family: Proza Libre;
+  font-weight: bold;
+  font-size: 17px;
+  color: black;
+}
+
+.new-entry {
+  font-family: Proza Libre;
+  color: rgb(37, 36, 36);
+  font-size: 23px;
+}
+
+img:nth-child(1) {
+  width: 100%;
+  height: auto;
+  /* width: 80%; */
+  column-width: 80%;
+}
+
+.titletextlabel {
+  font-family: Proza Libre;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.titletext {
+  width: 100%;
+  height: 2rem;
+  border-radius: .2rem;
+  border: solid 1px rgb(174, 173, 173);
+  column-width: 100%;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.titletext:focus,
+.phototext:focus,
+.textarea1:focus {
+  outline: none;
+  border: 2px solid #562B81;
+}
+
+.phototextlabel {
+  font-family: Proza Libre;
+  font-weight: bold;
+}
+
+.phototext {
+  width: 100%;
+  height: 2rem;
+  border-radius: .2rem;
+  border: solid 1px rgb(174, 173, 173);
+  margin-right: 2rem;
+  margin-top: 1rem;
+  column-width: 100%;
+}
+
+.notestext {
+  height: 5rem;
+  border-radius: .2rem;
+  border: solid 1px rgb(174, 173, 173);
+  margin-right: 2rem;
+  padding-bottom: 3.2rem;
+  padding-left: .5rem;
+  column-width: 100%;
+}
+
+.textarea1 {
+  width: 100%;
+  resize: none;
+  height: 9rem;
+  border-radius: .2rem;
+  border: solid 1px rgb(174, 173, 173);
+  margin-right: 2rem;
+  padding-bottom: 3.2rem;
+  padding-left: .5rem;
+  padding-top: 5px;
+  column-width: 100%;
+}
+
+.save-button {
+  width: 52px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 1rem;
+  margin-left: 48.6rem;
+  color: white;
+  background-color: #562B81;
+  border: solid 1px;
+  border-radius: .3rem;
+}
+
+@media screen and (max-width: 700px) {
+  .heading {
+    width: 100%;
+    height: 70px;
+  }
+
+  .heading-text {
+    margin-left: 1.4rem;
+    font-size: 30px;
+  }
+
+  .textarea1 {
+    width: 20.5rem;
+  }
+
+  .titletext {
+    width: 90%;
+  }
+
+  .phototext {
+    width: 90%;
+  }
+
+  .heading-text {
+    flex-basis: auto;
+  }
+
+  input {
+    width: 20.5rem;
+  }
+
+  img:nth-child(1) {
+    height: auto;
+    width: 329px;
+  }
+
+  .save-button {
+    margin-left: 17.4rem;
+  }
+}
