@@ -20,7 +20,7 @@
   <header>
     <div class="containertwo">
       <h3 class="heading-text">Code Journal</h3>
-      <a href="#entries-form" class="entrieslink">Entries</a>
+      <nav><a href="#entries-form" class="entrieslink">Entries</a></nav>
     </div>
   </header>
   <main>
@@ -64,13 +64,22 @@
       </div>
     </form>
   </div>
-  <div data-view="entries" id="entries-form" class="entriesformclass">
+  <div data-view="entries" id="entries-form" class="entriesformclass ">
     <div class="container">
       <div class="row justifyconspaceb">
         <h1>Entries</h1>
-        <a id="newentry" href="#entry-form">NEW</a>
+        <a id="newentry" href="index.html">NEW</a>
       </div>
-      <ul id="unordered-list" class="unorderedentries"></ul>
+      <ul id="unordered-list" class="unorderedentries">
+        <li class="row">
+          <img class="imgexample column-half borderradius margintop" src="images/placeholder-image-square.jpg"
+           alt="placeholder">
+          <div class="column-half">
+            <h1 class="entryheading">Test</h1>
+            <p class="marginleftlist">dddddd</p>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
   <script src="js/data.js"></script>

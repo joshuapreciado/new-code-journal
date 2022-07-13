@@ -3,9 +3,11 @@
 var photoholder = document.querySelector('.phototext');
 var fakeimage = document.querySelector('.standard-image')
 var formelement = document.querySelector('form');
-var viewentry = document.querySelector('.ul');
+var viewentry = document.querySelector('ul');
 var entriesform = document.querySelector('[data-view="entries"]');
 var entryformview = document.querySelector('[data-view="entry-form"]');
+var headerOneEntries = document.querySelector('h1');
+
 
 photoholder.addEventListener('input', inputhandler);
 
@@ -34,15 +36,11 @@ entryform.addEventListener('submit', function entrynew(event) {
   data.entries.unshift(inputvalues);
   fakeimage.src = 'images/placeholder-image-square.jpg';
   formelement.reset();
-
-  entryformview.className = 'hidden';
-
-  for (var i = 0; i < data.entries.length; i++) {
-    var testentry = data.entries[i];
-    viewentry.appendChild(testentry);
-  }
-
 })
+
+
+
+
 //Add some dummy journal entries to the unordered- Y
 //list in the HTML and style them to match the wireframe. Y
 // Check that the entries list looks good on both mobile and desktop screens. Y
@@ -56,12 +54,14 @@ entryform.addEventListener('submit', function entrynew(event) {
 // Ensure that submitoting a new journal entry also creates a new DOM tree for it and adds it to the page.
 // Ensure that submitting a new jurnal entry automatically shows the 'entries' view without reloading the page.
 
-/**<div data-view="entries" id="entries-form" class="entriesformclass ">
-  < div class="container" >
-    <div class="row justifyconspaceb">
-      <h1>Entries</h1>
-      <a id="newentry" href="#entry-form">NEW</a>
-    </div>
-    <ul id="unordered-list" class="unorderedentries"></ul>
-  </div>
+/**      <ul id="unordered-list" class="unorderedentries">
+        <li class="row">
+          <img class="imgexample column-half borderradius margintop" src="images/placeholder-image-square.jpg"
+           alt="placeholder">
+          <div class="column-half">
+            <h1 class="entryheading">Test</h1>
+            <p class="marginleftlist">dddddd</p>
+          </div>
+        </li>
+      </ul>
 **/
