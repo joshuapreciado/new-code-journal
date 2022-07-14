@@ -76,6 +76,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
     viewentry.appendChild(entrylist)
   }
 });
+
+function viewswap(view) {
+  var entriez = document.querySelector('[data-view="entries"]');
+}
+
+
 //F
 //Add some dummy journal entries to the unordered- Y
 //list in the HTML and style them to match the wireframe. Y
