@@ -3,6 +3,10 @@
 var photoholder = document.querySelector('.phototext');
 var fakeimage = document.querySelector('.standard-image')
 var formelement = document.querySelector('form');
+var viewentry = document.querySelector('ul');
+var entriesform = document.querySelector('[data-view="entries"]');
+var entryformview = document.querySelector('[data-view="entry-form"]');
+var headerOneEntries = document.querySelector('h1');
 
 photoholder.addEventListener('input', inputhandler);
 
