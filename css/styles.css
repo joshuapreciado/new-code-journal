@@ -3,6 +3,7 @@
   height: 50px;
   padding: 1px;
   display: flex;
+
 }
 
 .heading-text {
@@ -13,6 +14,15 @@
   font-family: Proza Libre;
   font-weight: 100;
   background-color: #562B81;
+}
+
+.entrieslink {
+  position: absolute;
+  left: 43rem;
+  top: .8rem;
+  font-size: 17px;
+  color: white;
+  font-family: Proza Libre;
 }
 
 
@@ -29,11 +39,12 @@ h2 {
   font-size: 23px;
 }
 
-img:nth-child(1) {
+img {
   width: 100%;
   height: auto;
   /* width: 80%; */
   column-width: 80%;
+  borderradiu
 }
 
 .titletextlabel {
@@ -107,6 +118,73 @@ img:nth-child(1) {
   background-color: #562B81;
   border: solid 1px;
   border-radius: .3rem;
+}
+
+#newentry {
+  width: 55px;
+  height: 35px;
+  padding: 8px;
+  margin-top: 40px;
+  color: white;
+  background-color: #562B81;
+  border: solid 1px;
+  border-radius: .3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#new {
+  text-decoration: none;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
+}
+
+.justifyconspaceb {
+  justify-content: space-between;
+}
+
+
+h1 {
+  margin-left: 1rem;
+}
+
+.paddingleft {
+  padding-left: 20px;
+}
+
+
+p {
+  overflow-wrap: break-word;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.borderradius {
+  border-radius: 4%;
+}
+
+.entryheading {
+  font-family: Proza Libre;
+  font-weight: normal;
+  font-size: 30px;
+}
+
+.marginleftlist {
+  margin-left: 1.2rem;
+}
+
+.margintop {
+  margin-top: 25px;
 }
 
 @media screen and (max-width: 700px) {
