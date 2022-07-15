@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Code Journal</title>
   <link rel="icon" href="images/favicon.ico">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer" />
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Proza+Libre&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <header>
     <div class="containertwo">
-      <h3 class="heading-text">Code Journal</h3>
+      <div class="holder">
+        <div class="row column-full">
+          <h3 class="heading-text">Code Journal</h3>
+          <a href="#entries-form" class="entrieslink">Entries</a>
+        </div>
+      </div>
     </div>
   </header>
   <main>
   </main>
-  <div data-view="entry-form" id="entry-form" class="entryformclass">
+  <div data-view="entry-form" id="entry-form" class="entryformclass viewable">
     <form>
       <div class="container">
         <div class="column-full">
@@ -38,19 +42,9 @@
           </div>
           <div class="column-half">
             <label class="titletextlabel" for="titletext">Title</label>
-            <input
-            required
-            size="35"
-            name="titleText"
-            class="titletext"
-            type="text">
+            <input required size="35" name="titleText" class="titletext" type="text">
             <label class="phototextlabel" for="phototext">Photo URL</label>
-            <input
-            required
-            size="35"
-            name="photoText"
-            class="phototext"
-            type="text">
+            <input required size="35" name="photoText" class="phototext" type="text">
           </div>
           <div class="column-full">
             <h2>Notes</h2>
@@ -63,7 +57,26 @@
       </div>
     </form>
   </div>
+  <div data-view="entries" id="entries-form" class="entriesformclass hidden">
+    <div class="container">
+      <div class="row justifyconspaceb">
+        <h1 class="headerentries">Entries</h1>
+        <a id="newentry" href="index.html">NEW</a>
+      </div>
+      <ul id="unordered-list" class="unorderedentries">
+        <li class="row">
+          <img class="imgexample column-half borderradius margintop" src="images/placeholder-image-square.jpg"
+            alt="placeholder">
+          <div class="column-half">
+            <h1 class="entryheading">Test</h1>
+            <p class="marginleftlist">dddddd</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
+
 </html>
