@@ -1,28 +1,25 @@
 .containertwo {
   background-color: #562B81;
   height: 50px;
-  padding: 1px;
-  display: flex;
 
 }
 
+
 .heading-text {
-  margin: auto;
-  flex-basis: 43%;
   color: white;
   font-size: 20px;
   font-family: Proza Libre;
   font-weight: 100;
-  background-color: #562B81;
+  margin-left: 33rem;
 }
 
+
 .entrieslink {
-  position: absolute;
-  left: 43rem;
-  top: .8rem;
   font-size: 17px;
   color: white;
   font-family: Proza Libre;
+  margin-top: 21px;
+  margin-left: 20px;
 }
 
 
@@ -128,6 +125,12 @@ img {
   background-color: #562B81;
   border: solid 1px;
   border-radius: .3rem;
+  font-family: Proza Libre;
+}
+
+.headerentries {
+  font-family: Proza Libre;
+  color: #292929;
 }
 
 .hidden {
@@ -228,5 +231,13 @@ ul {
 
   .save-button {
     margin-left: 17.4rem;
+  }
+
+  .heading-text {
+    font-size: large;
+  }
+
+  #newentry {
+    margin-top: 1.6rem;
   }
 }
