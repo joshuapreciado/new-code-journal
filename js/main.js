@@ -4,8 +4,7 @@ var photoholder = document.querySelector('.phototext');
 var fakeimage = document.querySelector('.standard-image')
 var formelement = document.querySelector('form');
 var viewentry = document.querySelector('ul');
-var entriesform = document.querySelector('[data-view="entries"]');
-var entryformview = document.querySelector('[data-view="entry-form"]');
+
 var headerOneEntries = document.querySelector('h1');
 
 photoholder.addEventListener('input', inputhandler);
@@ -23,7 +22,7 @@ function falseyimage(url) {
 }
 
 var entryform = document.querySelector('#entry-form');
-entryform.addEventListener('submit', function(event) {
+entryform.addEventListener('submit', function (event) {
   event.preventDefault();
   var inputvalues = {};
   inputvalues.titleText = formelement.elements.titleText.value;
@@ -35,6 +34,7 @@ entryform.addEventListener('submit', function(event) {
   data.entries.unshift(inputvalues);
   fakeimage.src = 'images/placeholder-image-square.jpg';
   formelement.reset();
+  viewswap('entries');
 })
 
 
@@ -71,18 +71,36 @@ function newentries(entry) {
 
 //DomContentLoaded event listener
 document.addEventListener('DOMContentLoaded', function (event) {
-  for (var i = data.entries.length - 1; i >= 0; i--) {
+  for (var i = 0; i < data.entries.length; i++) {
     var entrylist = newentries(data.entries[i])
     viewentry.appendChild(entrylist)
   }
+  viewswap(data.view);
 });
 
+var entriesform = document.querySelector('[data-view="entries"]');
+var entryformview = document.querySelector('[data-view="entry-form"]');
 function viewswap(view) {
-  var entriez = document.querySelector('[data-view="entries"]');
+  if (view === 'entry-form') {
+    entriesform.setAttribute('class', 'hidden');
+    entryformview.setAttribute('class', 'viewable');
+  } else if (view === 'entries') {
+    entryformview.setAttribute('class', 'hidden');
+    entriesform.setAttribute('class', 'viewable');
+  }
 }
 
+var entrieslink = document.querySelector('.entrieslink');
+entrieslink.addEventListener('click', function (event) {
+  data.view = 'entries';
+  viewswap('entries');
+});
 
-//F
+var newentry = document.querySelector('#newentry');
+newentry.addEventListener('click', function (event) {
+  data.view = 'entry-form';
+  viewswap('entry-form');
+});
 //Add some dummy journal entries to the unordered- Y
 //list in the HTML and style them to match the wireframe. Y
 // Check that the entries list looks good on both mobile and desktop screens. Y

@@ -44,7 +44,6 @@ img {
   height: auto;
   /* width: 80%; */
   column-width: 80%;
-  borderradiu
 }
 
 .titletextlabel {
@@ -133,6 +132,10 @@ img {
 
 .hidden {
   display: none;
+}
+
+.viewable {
+  display: block;
 }
 
 #new {
