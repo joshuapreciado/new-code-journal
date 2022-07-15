@@ -30,13 +30,14 @@ entryform.addEventListener('submit', function (event) {
   inputvalues.textArea1 = formelement.elements.textArea1.value;
 
   inputvalues.entryId = data.nextEntryId;
+  var testnewentry = newentries(inputvalues);
+  viewentry.prepend(testnewentry);
   data.nextEntryId++;
   data.entries.unshift(inputvalues);
   fakeimage.src = 'images/placeholder-image-square.jpg';
   formelement.reset();
   viewswap('entries');
 })
-
 
 
 function newentries(entry) {
