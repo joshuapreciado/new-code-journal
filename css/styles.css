@@ -193,6 +193,17 @@ ul {
   margin-top: 25px;
 }
 
+
+.pensettings {
+  color: #562B81;
+  font-size: 20px;
+  margin-left: 100%;
+}
+
+.pensettings:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 700px) {
   .heading {
     width: 100%;

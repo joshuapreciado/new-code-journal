@@ -33,7 +33,7 @@
       <div class="container">
         <div class="column-full">
           <div class="new-entry">
-            <h4>New Entry</h4>
+            <h4 id="newentry1">New Entry</h4>
           </div>
         </div>
         <div class="row">
@@ -41,10 +41,10 @@
             <img class="standard-image" src="images/placeholder-image-square.jpg" alt="placeholder">
           </div>
           <div class="column-half">
-            <label class="titletextlabel" for="titletext">Title</label>
+            <label class="titletextlabel" id="titleid" for="titletext">Title</label>
             <input required size="35" name="titleText" class="titletext" type="text">
             <label class="phototextlabel" for="phototext">Photo URL</label>
-            <input required size="35" name="photoText" class="phototext" type="text">
+            <input required size="35" id="phototextid" name="photoText" class="phototext" type="text">
           </div>
           <div class="column-full">
             <h2>Notes</h2>
@@ -64,14 +64,6 @@
         <a id="newentry" href="index.html">NEW</a>
       </div>
       <ul id="unordered-list" class="unorderedentries">
-        <li class="row">
-          <img class="imgexample column-half borderradius margintop" src="images/placeholder-image-square.jpg"
-            alt="placeholder">
-          <div class="column-half">
-            <h1 class="entryheading">Test</h1>
-            <p class="marginleftlist">dddddd</p>
-          </div>
-        </li>
       </ul>
     </div>
   </div>

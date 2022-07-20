@@ -44,6 +44,7 @@ function newentries(entry) {
   //List
   var entrylist = document.createElement('li');
   entrylist.setAttribute('class', 'row');
+  entrylist.setAttribute('data-entry-id', entry.entryId);
 
   //Image w classes
   var listimage = document.createElement('img');
@@ -53,13 +54,20 @@ function newentries(entry) {
 
   //Div w classes
   var entrylistdiv = document.createElement('div');
-  entrylistdiv.setAttribute('class', 'column-half');
+  entrylistdiv.setAttribute('class', 'column-half entrylistprops');
   entrylist.appendChild(entrylistdiv);
+
   //Heading w classes
   var entrylisthead = document.createElement('h1');
   entrylisthead.setAttribute('class', 'entryheading');
   entrylisthead.textContent = entry.titleText;
   entrylistdiv.appendChild(entrylisthead);
+
+  //EditorIcon
+  var editor = document.createElement('i');
+  editor.setAttribute('class', 'fas fa-pen pensettings');
+  editor.setAttribute('data-entry-id', entry.entryId);
+  entrylisthead.appendChild(editor);
 
   //P w classes
   var entrylistnotes = document.createElement('p');
@@ -101,4 +109,18 @@ var newentry = document.querySelector('#newentry');
 newentry.addEventListener('click', function (event) {
   data.view = 'entry-form';
   viewswap('entry-form');
+});
+
+viewentry.addEventListener('click', function (event) {
+  if (event.target.matches('.fas')) {
+    document.getElementById('newentry1').textContent = 'test edit';
+    data.view = 'entry-form';
+    viewswap('entry-form');
+    var testicon = event.target;
+    console.log(testicon.getAttribute('data-entry-id'))
+    data.editing = data.entries[(testicon.getAttribute('data-entry-id'))]
+    document.getElementById('titleid').setAttribute('value', data.editing.titleText);
+    document.getElementById('phototextid').setAttribute('value', data.editing.photoText);
+    fakeimage.src = data.editing.photoText;
+  }
 });
