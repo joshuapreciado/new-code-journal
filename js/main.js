@@ -117,9 +117,12 @@ viewentry.addEventListener('click', function (event) {
     data.view = 'entry-form';
     viewswap('entry-form');
     var testicon = event.target;
-    console.log(testicon.getAttribute('data-entry-id'))
-    data.editing = data.entries[(testicon.getAttribute('data-entry-id'))]
+    console.log(testicon.getAttribute('data-entry-id'));
+    data.editing = data.entries[data.entries.length - event.target.id]
+    console.log('test:', data.editing);
     document.getElementById('titleid').setAttribute('value', data.editing.titleText);
+
+
     document.getElementById('phototextid').setAttribute('value', data.editing.photoText);
     fakeimage.src = data.editing.photoText;
   }
